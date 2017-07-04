@@ -7,6 +7,9 @@ class Product(object):
         self.cost = cost
         self.status = 'for sale'
     
+    def __repr__(self):
+        return "<Product object: {}\nPrice: {}>".format(self.name, self.price)
+    
     def sell(self):
         self.status = 'sold'
         return self

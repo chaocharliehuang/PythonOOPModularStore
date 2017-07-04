@@ -6,6 +6,9 @@ class Store(object):
         self.address = address
         self.owner = owner
     
+    def __repr__(self):
+        return "<Store object owner: {}\nAddress: {}>".format(self.owner, self.address)
+    
     def add_product(self, product):
         self.products.append(product)
         return self
